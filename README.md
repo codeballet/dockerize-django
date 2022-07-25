@@ -24,13 +24,13 @@ Run the command (do not forget the dot at the end):
 sudo docker-compose run web django-admin startproject composeexample .
 ```
 
-If you are running Docker on Linux, the files django-admin created are owned by the `root` user. This happens because the container runs as the `root` user. Change the ownership of the new files created by docker in your local directory.
-
-In case you enable the Postgres option, do not change the permission of the data folder where Postgres has its file, otherwise Postgres will not be able to start due to permission issues.
+If you are running Docker on Linux, the files django-admin created are owned by the `root` user. This happens because the container runs as the `root` user. Change the ownership of the new files created by docker in your local directory with the command:
 
 ```
 sudo chown -R $USER:$USER composeexample manage.py
 ```
+
+In case you enable the Postgres option, do not change the permission of the data folder where Postgres has its file, otherwise Postgres will not be able to start due to permission issues.
 
 ### Connecting to a Postgres database (optional, by default disabled in `docker-compose.yml`)
 
