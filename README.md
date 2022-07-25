@@ -18,7 +18,7 @@ The repository contains a full web app, however, if you want to create your own 
 
 ### Create a new Django project:
 
-Run the command (do not forget the dot at the end):
+If you want to create a new project, in this example named "composeexample", run the command (do not forget the dot at the end):
 
 ```
 sudo docker-compose run web django-admin startproject composeexample .
