@@ -4,7 +4,7 @@
 
 Dockerize Django is an example of how Django may be run under Docker. The Django app here is a simple note taking app.
 
-The app is by default using the sqlite database. However, you may enable the Postgres option in the `docker-compose.yml` file, and appropriately change the code in the app if you want to use Postgres instead. See the below section "Connecting to a Postgres database" for more information.
+The app is by default using the `session` for storing tasks. This could of course be changed to using the sqlite database. However, you may alternatively enable the Postgres option in the `docker-compose.yml` file, and appropriately change the code in the app if you want to use Postgres instead. See the below section "Connecting to a Postgres database" for more information.
 
 Using the approach in this project, neither Python, pip, nor Django is necessary to install locally on the computer. Django is not running directly on your computer, but inside of Docker. All that is necessary is Docker. The `docker-compose.yml` file will use `volumes` to create a copy of the Django project in your local directory, where your `docker-compose.yml` file is stored. Any changes you do in that directory will be reflected in the Django app that is running in a Docker container.
 
