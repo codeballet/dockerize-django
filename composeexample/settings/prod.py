@@ -17,6 +17,3 @@ DEBUG = False
 
 # Add webdomain or server IP
 ALLOWED_HOSTS = ["localhost"]
-
-# collect static files with command: 'python manage.py collectstatic'
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
