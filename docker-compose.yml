@@ -26,8 +26,10 @@ services:
     image: nginx:1.23
     volumes:
       - ./nginx/config/nginx.conf:/etc/nginx/nginx.conf
-      - staticfiles:/code/staticfiles
+      - staticfiles:/home/composeexample/staticfiles
     ports:
       - "80:80"
+    depends_on:
+      - "web"
 volumes:
   staticfiles:
